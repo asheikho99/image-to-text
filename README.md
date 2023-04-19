@@ -16,24 +16,24 @@ This script uses the Python Imaging Library (PIL), pytesseract, and the dotenv l
 
 3. Install pytesseract and python-dotenv using pip:
 
-\```bash
+```bash
 pip install pytesseract python-dotenv
-\```
+```
 
 ## Usage
 
 1. Create a `.env` file in the same directory as the script and set the environment variables `SAMPLE_1` and `PATH_TO_TESSERACT`:
 
-\```
+```
 SAMPLE_1=/path/to/image/file
 PATH_TO_TESSERACT=/path/to/tesseract/executable
-\```
+```
 
 2. Run the script:
 
-\```bash
+```bash
 python ocr_script.py
-\```
+```
 
 The script will load the image specified by the `SAMPLE_1` environment variable, use pytesseract to extract text from the image, and print the extracted text to the console.
 
@@ -41,7 +41,7 @@ The script will load the image specified by the `SAMPLE_1` environment variable,
 
 Here's an example of the script in action:
 
-\```python
+```python
 from PIL import Image
 from pytesseract import pytesseract
 from dotenv import load_dotenv
@@ -59,6 +59,6 @@ img = Image.open(image_path)
 pytesseract.tesseract_cmd = path_to_tesseract
 text = pytesseract.image_to_string(img)
 print(text)
-\```
+```
 
 For more information and usage examples of pytesseract, refer to the [official pytesseract GitHub repository](https://github.com/madmaze/pytesseract/blob/master/README.rst).
